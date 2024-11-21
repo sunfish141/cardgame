@@ -23,7 +23,7 @@ body {
   height: 100%;
   background-size: cover;
   background-position: center;
-  z-index: -1;
+  z-index: 1;
 }
 
 .container {
@@ -61,6 +61,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  z-index: 2;
 }
 
 .button {
@@ -125,7 +126,7 @@ p {
 .modal {
   display: none;  /* Initially hidden */
   position: fixed;
-  z-index: 1;
+  z-index: 3;
   left: 0;
   top: 0;
   width: 100%;
@@ -141,6 +142,7 @@ p {
   border-radius: 10px;
   width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 3;
 }
 
 .close-btn {
@@ -182,4 +184,8 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background-color: #27ae60;
+}
+
+.modal.hidden {
+  pointer-events: none;
 }
