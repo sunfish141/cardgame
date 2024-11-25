@@ -1,12 +1,11 @@
 import sqlite3
-import flask
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp
-from werkzeug.security import check_password_hash, generate_password_hash
 from datetime import datetime, date
 import requests
 table = sqlite3.connect('users.db')
+print(table)
 
 app = Flask(__name__)
 
@@ -24,11 +23,15 @@ def index():
 
 @app.route('/submit', methods=['POST'])
 def submit():
-    print('e')
-    name = request.form.get('username')
+    name = request.form.get('username')#injection?
     password = request.form.get('password')
     print(name)
-    return f"Form submitted with username: {name} and password: {password}"
+    nameexists = table.execute('SELECT username FROM users WHERE usernanme = (?)', (name,))
+    if sum(1 for row in nameexists) > 0:
+        return('user already exists')#make frontend submit request
+    else:
+        table.execute("INSERT INTO USERS(USERNAME, PASSWORD) \
+                      Values((?, ?))", (name, password))
 
 
 if __name__ == '__main__':
