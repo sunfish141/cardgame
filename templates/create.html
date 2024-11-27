@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer type="text/javascript" src="{{ url_for('static', filename='cards.js') }}"></script>
+    <script defer type="text/javascript" src="{{ url_for('static', filename='deckbuilder.js') }}"></script>
+    <title>Build Deck</title>
+    <style>
+        /* Reset margins and paddings */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Make sure the body takes the full height of the viewport */
+        html, body {
+            height: 100%;
+        }
+
+        /* Set up a flex container to create the two sections */
+        .container {
+            display: flex;
+            height: 100%;
+        }
+
+        /* Style for the first section, taking up 80% of the width */
+        .left-section {
+            width: 80%;
+            background-color: lightblue; /* Example background color */
+        }
+
+        /* Style for the second section, taking up 20% of the width */
+        .right-section {
+            width: 20%;
+            background-color: lightgreen; /* Example background color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section" id="catalog">
+            
+        </div>
+        <div class="right-section" id="deck">
+            <!-- Content for the right section goes here -->
+        </div>
+    </div>    
+</body>
+</html>

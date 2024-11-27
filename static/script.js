@@ -42,7 +42,7 @@ document.getElementById('loginForm').onsubmit = function(e) {
     // Set up a function that is triggered when the request completes
     xhr.onload = function() {
         if (xhr.status === 200) {
-            alert('Form submitted successfully: ' + xhr.responseText);
+            alert(xhr.responseText);
         } else {
             alert('Error: ' + xhr.status);
         }
