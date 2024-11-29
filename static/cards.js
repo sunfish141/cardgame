@@ -4,279 +4,479 @@ data = [
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder2",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder3",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder4",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder5",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder6",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder7",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder8",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder9",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder10",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder11",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder12",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder13",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder14",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder15",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder16",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder17",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder18",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder19",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder20",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder21",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder22",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder23",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder24",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder25",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder26",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder27",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder28",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder29",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder30",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder31",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder32",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder33",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder34",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder35",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder36",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder37",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder38",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder39",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   },
   {
     "name": "placeholder40",
     "desc": "placeholder",
     "image": "placeholder",
     "atk": 3,
-    "def": 3
+    "def": 3,
+    "deploymentcost": 1,
+    "usecost": 1,
+    "amount": 4,
+    "keywords": [],
+    "type": "unit"
   }
 ];

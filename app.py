@@ -26,14 +26,15 @@ def submit():
     password = request.form.get('password')
     table = sqlite3.connect('users.db')
     nameexists = table.execute('SELECT username FROM users WHERE username=(?)', (str(name,)))
-    print(sum(1 for row in nameexists))
-    if sum(1 for row in nameexists) > 0:
+    count = (sum(1 for row in nameexists))
+    if count > 0:
         globals()[currentuser] = name
         table.close()
         return('Logged in')#make frontend submit request
     else:
-        table.execute("INSERT INTO USERS(USERNAME, PASSWORD) \
-                      Values(?, ?)", (str(name), str(password)))#run cd cardgaem
+        table.execute("INSERT INTO USERS(USERNAME, PASSWORD, ELO) \
+                      Values(?, ?, ?)", (str(name), str(password), 0))#run cd cardgaem
+        table.commit()
         globals()[currentuser] = name
         table.close()
         return 'User created'
