@@ -6,17 +6,16 @@ class Card{
         this.atk = atk;
         this.def = def;
         this.amount = amount;
+        this.deploymentcost = depcost;
+        this.usecost = ucost;
+        this.keywords = [];
+        this.type = "unit";
         this.id = '';
-        this.deploymentcost = depcost,
-        this.usecost = ucost,
-        this.keywords = [],
-        this.type = "unit"
     }
 }
 
 let cards = []
 let deck = {}
-remaining = {}
 function addCardToCatalog(card) {
     // Get the catalog div
     const catalog = document.getElementById('catalog');
@@ -50,7 +49,7 @@ function addCardToCatalog(card) {
 
     // Add card attack and defense stats
     const cardStats = document.createElement('p');
-    cardStats.textContent = `ATK: ${card.atk} | DEF: ${card.def} | AMOUNT: 4`;
+    cardStats.textContent = `ATK: ${card.atk} | DEF: ${card.def} | AMOUNT: ${card.amount}`;
     cardStats.id = `card-stats-${card.name.replace(/\s+/g, '-').toLowerCase()}`;
     card.id = cardStats.id
     cardDiv.appendChild(cardStats);
@@ -58,9 +57,16 @@ function addCardToCatalog(card) {
     cardDiv.onclick = function () {
         const statsId = `card-stats-${cardDiv.querySelector('h3').textContent.replace(/\s+/g, '-').toLowerCase()}`;
         const cardStatsElement = document.getElementById(statsId);
-        cardStatsElement.textContent = `ATK: ${card.atk} | DEF: ${card.def} | AMOUNT: ${newAmount}`;
-        catalog.removeChild(cardDiv);
-        addCardToDeck(card);
+        for(card in cards){
+            if(card.id == statsId){
+                card.amount-=1;
+                cardStatsElement.textContent = `ATK: ${card.atk} | DEF: ${card.def} | AMOUNT: ${card.amount}`;
+                if(card.amount <= 0){
+                    catalog.removeChild(cardDiv);
+                    addCardToDeck(card);
+                }
+            }
+        }
     }
     // Append the card to the catalog
     catalog.appendChild(cardDiv);
@@ -88,8 +94,23 @@ function addCardToDeck(card){
     cardDesc.textContent = card.desc;
     cardDiv.appendChild(cardDesc);
 
+    const cardStats = document.createElement('p');
+    cardStats.textContent = `ATK: ${card.atk} | DEF: ${card.def} | AMOUNT: ${4 - card.amount}`;
+    cardStats.id = `card-stats-${card.name.replace(/\s+/g, '-').toLowerCase()}`;
+    card.id = cardStats.id
+    cardDiv.appendChild(cardStats);
+
     cardDiv.onclick = function () {
-        deck.removeChild(cardDiv);
+        const statsId = `card-stats-${cardDiv.querySelector('h3').textContent.replace(/\s+/g, '-').toLowerCase()}`;
+        const cardStats = document.getElementById(statsId);
+        for(card in cards){
+            card.amount+=1;
+            cardStats.textContent = `ATK: ${card.atk} | DEF: ${card.def} | AMOUNT: ${4 - card.amount}`;
+            if(card.amount<=0){
+                deck.removeChild(cardDiv);
+                addCardToDeck(card)
+            }
+        }
         addCardToCatalog(card);
     };
     // Append the card to the catalog
@@ -99,6 +120,6 @@ for(let i = 0; i < data.length; i++){
     newCard = new Card(data[i]["name"], data[i]["desc"], data[i]["image"], data[i]['atk'], data[i]['def'], 
         data[i]['amount'], data[i]['deploymentcost'], data[i]['usecost'],
         data[i]['keywords'], data[i]['type'])
-        cards.append(newCard)
+        cards.push(newCard)
     addCardToCatalog(newCard)
 }

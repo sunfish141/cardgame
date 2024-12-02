@@ -1,13 +1,13 @@
 data = [
   {
-    "name": "placeholder1",
-    "desc": "placeholder",
-    "image": "placeholder",
-    "atk": 3,
-    "def": 3,
-    "deploymentcost": 1,
-    "usecost": 1,
-    "amount": 4,
+    "name": "Lucas OpenBCI",
+    "desc": "Grandma Lucas",
+    "image": "cardgame/static/photos/theGOAT.jpg",
+    "atk": 100,
+    "def": 300,
+    "deploymentcost": 12,
+    "usecost": 6,
+    "amount": 1,
     "keywords": [],
     "type": "unit"
   },
