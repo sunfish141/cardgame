@@ -2,7 +2,7 @@ data = [
   {
     "name": "Lucas OpenBCI",
     "desc": "Grandma Lucas",
-    "image": "cardgame/static/photos/theGOAT.jpg",
+    "image": "static/photos/theGOAT.jpg",
     "atk": 100,
     "def": 300,
     "deploymentcost": 12,
@@ -12,15 +12,15 @@ data = [
     "type": "unit"
   },
   {
-    "name": "placeholder2",
-    "desc": "placeholder",
+    "name": "eric Closed BCI",
+    "desc": "On deployment destroy all Lucas OpenBCI units",
     "image": "placeholder",
-    "atk": 3,
-    "def": 3,
-    "deploymentcost": 1,
-    "usecost": 1,
-    "amount": 4,
-    "keywords": [],
+    "atk": 1,
+    "def": 1,
+    "deploymentcost": 7,
+    "usecost": 2,
+    "amount": 3,
+    "keywords": ['specialericeffect'],
     "type": "unit"
   },
   {
