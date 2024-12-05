@@ -35,14 +35,23 @@
             width: 20%;
             background-color: lightgreen; /* Example background color */
         }
+        .noselect {
+            cursor: default;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="left-section" id="catalog">
+        <div class="left-section noselect" id="catalog">
             
         </div>
-        <div class="right-section" id="deck">
+        <div class="right-section noselect" id="deck">
 
         </div>
     </div>    

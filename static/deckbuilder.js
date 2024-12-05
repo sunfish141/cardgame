@@ -7,18 +7,27 @@ class Card{
         this.image = image;
         this.atk = atk;
         this.def = def;
+        this.max = amount;
         this.amount = amount;
         this.deploymentcost = depcost;
         this.usecost = ucost;
-        this.keywords = [];
+        this.keywords = keys;
         this.type = "unit";
-        this.id = '';
+        this.cid = 'e';
+        this.did = 'e';
     }
 }
 
 let cards = []
 let deck = {}
 function addCardToCatalog(card) {
+    if (card.cid != 'e'){
+        console.log('ere')
+        console.log(card.cid);
+        let cardStats = document.getElementById(card.cid); //id not working
+        cardStats.textContent = `ATK: ${card.atk} | DEF: ${card.def} | AMOUNT: ${card.amount}`;
+        return
+    }
     // Get the catalog div
     const catalog = document.getElementById('catalog');
     
@@ -51,26 +60,30 @@ function addCardToCatalog(card) {
     cardDiv.appendChild(cardDesc);
 
     // Add card attack and defense stats
-    const cardStats = document.createElement('p');
+    let cardStats = document.createElement('p');
     cardStats.textContent = `ATK: ${card.atk} | DEF: ${card.def} | AMOUNT: ${card.amount}`;
     cardStats.id = `card-stats-${card.name.replace(/\s+/g, '-').toLowerCase()}`;
-    card.id = cardStats.id;
-    console.log(card.id)
+    console.log(cardStats.id)
+    card.cid = cardStats.id;
+    console.log(card.cid)
     cardDiv.appendChild(cardStats);
 
     cardDiv.onclick = function () {
-        const statsId = `card-stats-${cardDiv.querySelector('h3').textContent.replace(/\s+/g, '-').toLowerCase()}`;
+        let statsId = `card-stats-${cardDiv.querySelector('h3').textContent.replace(/\s+/g, '-').toLowerCase()}`;
         console.log(statsId);
-        const cardStatsElement = document.getElementById(statsId);
+        let cardStatsElement = document.getElementById(statsId);
         for(let i = 0; i < cards.length;i++){
-            if(cards[i].id == statsId){
+            if(cards[i].cid == statsId){
+                deck[cards[i].name] += 1;
                 cards[i].amount-=1;
                 console.log('e');
                 cardStatsElement.textContent = `ATK: ${cards[i].atk} | DEF: ${cards[i].def} | AMOUNT: ${cards[i].amount}`;
                 if(card.amount <= 0){
                     catalog.removeChild(cardDiv);
-                    addCardToDeck(cards[i]);
+                    cards[i].cid = 'e';
                 }
+                addCardToDeck(cards[i]);
+                return;
             }
         }
     }
@@ -80,6 +93,11 @@ function addCardToCatalog(card) {
 
 function addCardToDeck(card){
     // Get the catalog div
+    if (card.did != 'e'){
+        let cardStats = document.getElementById(card.did); //id not working
+        cardStats.textContent = `ATK: ${card.atk} | DEF: ${card.def} | AMOUNT: ${card.max - card.amount}`;
+        return
+    }
     const deck = document.getElementById('deck');
     
     // Create a container for the card
@@ -99,23 +117,30 @@ function addCardToDeck(card){
     cardDesc.textContent = card.desc;
     cardDiv.appendChild(cardDesc);
 
-    const cardStats = document.createElement('p');
-    cardStats.textContent = `ATK: ${card.atk} | DEF: ${card.def} | AMOUNT: ${4 - card.amount}`;
-    cardStats.id = `card-stats-${card.name.replace(/\s+/g, '-').toLowerCase()}`;
-    card.id = cardStats.id
+    let cardStats = document.createElement('p');
+    cardStats.textContent = `ATK: ${card.atk} | DEF: ${card.def} | AMOUNT: ${card.max - card.amount}`;
+    cardStats.id = `card-stats-${card.name.replace(/\s+/g, '-').toLowerCase()}-cid`;
+    card.did = cardStats.id
+    console.log(card.did)
     cardDiv.appendChild(cardStats);
 
     cardDiv.onclick = function () {
-        const statsId = `card-stats-${cardDiv.querySelector('h3').textContent.replace(/\s+/g, '-').toLowerCase()}`;
-        const cardStats = document.getElementById(statsId);
+        let statsId = `card-stats-${cardDiv.querySelector('h3').textContent.replace(/\s+/g, '-').toLowerCase()}-cid`;
+        let cardStats = document.getElementById(statsId);
         for(let i = 0; i < cards.length; i++){
-            cards.amount+=1;
-            cardStats.textContent = `ATK: ${cards[i].atk} | DEF: ${cards[i].def} | AMOUNT: ${4 - cards[i].amount}`;
-            if((4 - card.amount)<=0){
-                deck.removeChild(cardDiv);
+            if(cards[i].did == statsId){
+                deck[cards[i].name] -= 1;
+                cards[i].amount+=1;
+                cardStats.textContent = `ATK: ${cards[i].atk} | DEF: ${cards[i].def} | AMOUNT: ${cards[i].max - cards[i].amount}`;
+                if((cards[i].max - cards[i].amount)<=0){
+                    deck.removeChild(cardDiv);
+                    cards[i].did='e';
+                }
                 addCardToCatalog(cards[i]);
+                return;
             }
         }
+        
     };
     // Append the card to the catalog
     deck.appendChild(cardDiv);
@@ -128,3 +153,4 @@ for(let i = 0; i < data.length; i++){
     console.log(newCard);
     cards.push(newCard);
 }
+

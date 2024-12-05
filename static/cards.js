@@ -14,7 +14,7 @@ data = [
   {
     "name": "eric Closed BCI",
     "desc": "On deployment destroy all Lucas OpenBCI units",
-    "image": "placeholder",
+    "image": "static/photos/download.png",
     "atk": 1,
     "def": 1,
     "deploymentcost": 7,
